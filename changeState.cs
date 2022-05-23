@@ -13,5 +13,7 @@ if(Input.GetKeyDown(KeyCode.Escape))
             GameState newGameState = CurrentGameState == GameState.Gameplay
                 ? GameState.paused
                 : GameState.Gameplay;
+            
+            GameStateManager.Instance.SetState(newGameState);   
          }
          
